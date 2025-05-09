@@ -1,10 +1,23 @@
 {
-    "tasks":[
-        {
-            "id":1,
-            "title":"Sample Task",
-            "description": "This is a Sample Task",
-            "status":"To Do"
-        }
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Sample Task 1",
+        "description": "This is a sample task",
+        "status": "To Do"
+      },
+      {
+        "id": 2,
+        "title": "Sample Task 2",
+        "description": "Another task in progress",
+        "status": "In Progress"
+      },
+      {
+        "id": 3,
+        "title": "Sample Task 3",
+        "description": "Completed task",
+        "status": "Done"
+      }
     ]
-}
+  }
+  

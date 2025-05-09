@@ -1,22 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import Column from './Column'
+import axios from 'axios'
+import AddTaskModal from './AddTaskModal'
 
 
 const KanbanBoard = () => {
-    const columns= ["To Do", "In Progress", "Done"]
+    const [tasks, setTasks]=useState([])
+    const [showModal, setShowModal]=useState(false)
+
+    const fetchTasks=async()=>{
+      const response=await axios
+      .get("http://localhost:3001/tasks")
+        setTasks(response.data)
+      }
+      useEffect(()=>{
+        fetchTasks()
+      }, [])
+
+      const handleTaskAdded=task=>{
+        setTasks(prev=>[...prev, task])
+      }
+
   return (
     <div>
-        <div className='full-board'>
-          <h2 className='header'>Task Management Dashboard</h2>
-          <div className='board'>
-            <button className='task'>Add New Task</button>
-          </div>
-          <div className='columns'>
-            {columns.map((column)=>{
-              <Column key={column} title={column}/>
-            })}
-          </div>
-        </div>
+      <button onClick={()=>setShowModal(true)}>Add New Task</button>
+      {
+        showModal && (
+          <AddTaskModal onClose={()=>setShowModal(false)} onTaskAdded={handleTaskAdded}/>
+        )
+      }
     </div>
   )
 }
