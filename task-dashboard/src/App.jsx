@@ -7,7 +7,8 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='app-container'>
+        <h1>Task Management Dashboard</h1>
        <KanbanBoard/>
       </div>
       

@@ -1,0 +1,34 @@
+
+.task-column {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .task-column h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .task-column.droppable {
+    border: 2px dashed #4CAF50;
+    cursor: pointer;
+  }
+  
+  .task-column.droppable:hover {
+    background-color: #e8f5e9;
+  }
+  
