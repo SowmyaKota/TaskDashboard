@@ -1,0 +1,35 @@
+.full-board{
+  padding: 20px;
+}
+.header{
+  text-align: center;
+}
+.board{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.task{
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #45a048;
+  color: white;
+  border: none;
+}
+.columns{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+.column-title{
+  display: flex 1;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  min-height: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+}
+.title{
+  text-align: center;
+}
